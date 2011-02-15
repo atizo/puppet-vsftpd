@@ -21,7 +21,7 @@ class vsftpd {
     require => File['/etc/vsftpd/vsftpd.conf'],
   }
   file{'/etc/vsftpd/vsftpd.conf':
-    source => "puppet://$source/vsftpd.conf",
+    source => "puppet://$source/modules/vsftpd/vsftpd.conf",
     require => Package['vsftpd'],
     owner => root, group => root, mode => 0600,
   }
